@@ -1,0 +1,13 @@
+<h1>Viajes</h1>
+<div *ngFor="let v of tripData">
+  Origen: {{v.origin.city}}, {{v.origin.address}}
+  <br>
+  Destino: {{v.destinity.city}}, {{v.destinity.address}}
+  <br>
+  Fecha y hora: {{v.departure}}, {{v.depTime}}
+  <br>
+  Precio: {{v.price}}
+
+  <br>
+  <br>
+</div>
