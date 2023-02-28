@@ -14,6 +14,16 @@ export class AdminListComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.consulta();
+  }
+
+  consulta(): void {
+    this.adminsService.getAdmins().subscribe( res => {
+      console.log(res);
+      this.adminsData = res;
+    }, (error: any) => {
+      console.log(error)
+    })
   }
 
 }

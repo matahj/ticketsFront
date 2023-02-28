@@ -14,6 +14,16 @@ export class DriverListComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.consulta();
+  }
+
+  consulta(): void {
+    this.driversService.getDrivers().subscribe( res => {
+      console.log(res);
+      this.driversData = res;
+    }, (error: any) => {
+      console.log(error);
+    })
   }
 
 }

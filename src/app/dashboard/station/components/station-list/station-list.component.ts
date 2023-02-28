@@ -14,8 +14,16 @@ export class StationListComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.consulta();
   }
 
-  
+  consulta(): void {
+    this.stationsService.getStations().subscribe( res => {
+      console.log(res);
+      this.stationsData = res;
+    }, (error: any) => {
+      console.log(error);
+    })
+  }
 
 }

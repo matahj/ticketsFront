@@ -14,6 +14,16 @@ export class BusListComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.consulta();
+  }
+
+  consulta(): void {
+    this.busesService.getBuses().subscribe( res => {
+      console.log(res);
+      this.busesData = res;
+    }, (error: any) => {
+      console.log(error);
+    })
   }
 
 }

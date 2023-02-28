@@ -5,7 +5,6 @@ import { DriverRoutingModule } from './driver-routing.module';
 import { DriverListComponent } from './components/driver-list/driver-list.component';
 import {HttpClientModule} from "@angular/common/http";
 
-
 @NgModule({
   declarations: [
     DriverListComponent

@@ -14,5 +14,15 @@ export class UserListComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.consulta();
+  }
+
+  consulta(): void {
+    this.usersService.getUsers().subscribe( res => {
+      console.log(res);
+      this.usersData = res;
+    }, (error: any) => {
+      console.log(error);
+    })
   }
 }

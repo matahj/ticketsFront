@@ -14,6 +14,16 @@ export class TicketListComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.consulta();
+  }
+
+  consulta(): void {
+    this.ticketsService.getTickets().subscribe( res=> {
+      console.log(res);
+      this.ticketsData = res;
+    }, (error: any) => {
+      console.log(error);
+    })
   }
 
 }
