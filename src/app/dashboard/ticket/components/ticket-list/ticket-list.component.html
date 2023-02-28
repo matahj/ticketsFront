@@ -1,4 +1,6 @@
-<h1>Boletos</h1>
+<h1>
+  Boletos
+</h1>
 
 <div *ngFor="let b of ticketsData">
   Pasajero: {{b.user.name}}
@@ -14,6 +16,9 @@
   Hora: {{b.trip.departure}}, {{b.trip.depTime}}
   <br>
   Autobús: {{b.trip.bus.plate}}, {{b.trip.bus.kind}}
+  <br>
+  <button>Imprimir</button>
+  <button>Cancelar</button>
   <br>
   <br>
 </div>

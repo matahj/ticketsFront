@@ -1,4 +1,7 @@
-<h1>Viajes</h1>
+<h1>
+  Viajes
+  <button>Nuevo</button>
+</h1>
 
 <div *ngFor="let v of tripsData">
   Origen: {{v.origin.city}}, {{v.origin.address}}
@@ -8,7 +11,10 @@
   Fecha y hora: {{v.departure}}, {{v.depTime}}
   <br>
   Precio: {{v.price}}
-
+  <br>
+  <button>Comprar</button>
+  <button>Borrar</button>
+  <button>Actualizar</button>
   <br>
   <br>
 </div>
