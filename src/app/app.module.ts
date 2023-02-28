@@ -6,18 +6,23 @@ import { AppComponent } from './app.component';
 
 import {DashboardModule} from "./dashboard/dashboard.module";
 import {SharedModule} from "./shared/shared.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotFoundComponent } from './not-found/not-found.component';
+import {AuthGuard} from "./guards/auth.guard";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    DashboardModule
+    DashboardModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

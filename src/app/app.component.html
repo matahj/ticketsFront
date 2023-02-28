@@ -1,8 +1,13 @@
-<app-header></app-header>
+<app-header01></app-header01>
 
-<button [routerLink]="['trips']">Viajes</button>
-<button [routerLink]="['tickets']" >Boletos</button>
+<button [routerLink]="['trips']" >Viajes</button>
+<button [routerLink]="['tickets']" *ngIf="userIsLogged || adminIsLogged">Boletos</button>
+<button [routerLink]="['users']" *ngIf="adminIsLogged">Usuarios</button>
+<button [routerLink]="['stations']" *ngIf="adminIsLogged">Estacones</button>
+<button [routerLink]="['buses']" *ngIf="adminIsLogged">Autobuses</button>
+<button [routerLink]="['drivers']" *ngIf="adminIsLogged">Conductores</button>
+<button [routerLink]="['admins']" *ngIf="adminIsLogged">Administradores</button>
 
 <router-outlet></router-outlet>
 
-<app-footer></app-footer>
+<app-footer01></app-footer01>

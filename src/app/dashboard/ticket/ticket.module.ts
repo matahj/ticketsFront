@@ -12,6 +12,9 @@ import { TicketListComponent } from './components/ticket-list/ticket-list.compon
   imports: [
     CommonModule,
     TicketRoutingModule
+  ],
+  exports: [
+    TicketListComponent
   ]
 })
 export class TicketModule { }
