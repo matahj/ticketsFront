@@ -8,4 +8,8 @@ export class BusesService {
 
   constructor(private httpClient: HttpClient) { }
   url = "https://ticketssprbootv2-production.up.railway.app/buses";
+
+  getBuses(){
+    return this.httpClient.get(this.url);
+  }
 }

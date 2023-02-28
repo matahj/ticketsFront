@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DriverRoutingModule } from './driver-routing.module';
 import { DriverListComponent } from './components/driver-list/driver-list.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { DriverListComponent } from './components/driver-list/driver-list.compon
   ],
   imports: [
     CommonModule,
-    DriverRoutingModule
+    DriverRoutingModule,
+    HttpClientModule
   ],
   exports: [
     DriverListComponent

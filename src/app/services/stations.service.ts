@@ -9,4 +9,8 @@ export class StationsService {
   constructor(private httpClient: HttpClient) { }
 
   url = "https://ticketssprbootv2-production.up.railway.app/stations";
+
+  getStations(){
+    return this.httpClient.get(this.url);
+  }
 }

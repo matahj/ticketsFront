@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import {TripModule} from "./trip/trip.module";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    HttpClientModule
   ],
   exports: [
     TripModule

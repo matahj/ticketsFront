@@ -7,7 +7,9 @@ import { HttpClient } from "@angular/common/http";
 export class UsersService {
 
   constructor(private httpClient: HttpClient) { }
-
   url = "https://ticketssprbootv2-production.up.railway.app/users";
 
+  getUsers(){
+    return this.httpClient.get(this.url);
+  }
 }

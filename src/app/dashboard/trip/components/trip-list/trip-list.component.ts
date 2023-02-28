@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TripService } from "../../../../services/trip.service";
 import {TripModel} from "../../../../models/trip.model";
+
+import { TripsService } from "../../../../services/trips.service";
 
 @Component({
   selector: 'app-trip-list',
@@ -10,9 +11,9 @@ import {TripModel} from "../../../../models/trip.model";
 export class TripListComponent implements OnInit{
 
   public trip! : TripModel;
-  public tripData: any;
+  public tripsData: any;
 
-  constructor( private tripService: TripService) {
+  constructor( private tripsService: TripsService) {
   }
 
   ngOnInit(): void {
@@ -20,13 +21,12 @@ export class TripListComponent implements OnInit{
   }
 
   consulta(): void {
-
-    this.tripService.getTrip().subscribe( res => {
+    this.tripsService.getTrips().subscribe(res =>{
       console.log(res);
-      this.tripData = res;
+      this.tripsData = res;
     }, (error: any) => {
       console.log(error);
-    } )
+    })
 
   }
 }

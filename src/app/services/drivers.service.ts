@@ -8,4 +8,8 @@ export class DriversService {
 
   constructor(private httpClient: HttpClient) { }
   url = "https://ticketssprbootv2-production.up.railway.app/drivers";
+
+  getDrivers(){
+    return this.httpClient.get(this.url);
+  }
 }

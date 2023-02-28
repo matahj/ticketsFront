@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { StationRoutingModule } from './station-routing.module';
 import { StationListComponent } from './components/station-list/station-list.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { StationListComponent } from './components/station-list/station-list.com
   ],
   imports: [
     CommonModule,
-    StationRoutingModule
+    StationRoutingModule,
+    HttpClientModule
   ],
   exports: [
     StationListComponent

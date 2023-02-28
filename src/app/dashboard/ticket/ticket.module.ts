@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TicketRoutingModule } from './ticket-routing.module';
 import { TicketListComponent } from './components/ticket-list/ticket-list.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { TicketListComponent } from './components/ticket-list/ticket-list.compon
   ],
   imports: [
     CommonModule,
-    TicketRoutingModule
+    TicketRoutingModule,
+    HttpClientModule
   ],
   exports: [
     TicketListComponent

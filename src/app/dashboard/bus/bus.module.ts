@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BusRoutingModule } from './bus-routing.module';
 import { BusListComponent } from './components/bus-list/bus-list.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { BusListComponent } from './components/bus-list/bus-list.component';
   ],
   imports: [
     CommonModule,
-    BusRoutingModule
+    BusRoutingModule,
+    HttpClientModule
   ],
   exports: [
     BusListComponent
