@@ -1,5 +1,15 @@
 <h1>Conductores</h1>
 
-
+<div *ngFor="let item of driversData">
+  Nombre: {{item.name}}
+  <br>
+  Teléfono: {{item.phone}}
+  <br>
+  Dirección:  {{item.address}}
+  <br>
+  Estación:  {{item.station.city}},  {{item.station.address}}
+  <br>
+  <br>
+</div>
 
 

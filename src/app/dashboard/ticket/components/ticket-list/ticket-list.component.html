@@ -1,7 +1,19 @@
 <h1>Boletos</h1>
 
-<ul>
-  <li>Boleto 1</li>
-  <li>Boleto 2</li>
-  <li>Boleto 3</li>
-</ul>
+<div *ngFor="let b of ticketsData">
+  Pasajero: {{b.user.name}}
+  <br>
+  Asiento: {{b.seat}}
+  <br>
+  Precio: {{b.price}}
+  <br>
+  Origen: {{b.trip.origin.city}}, {{b.trip.origin.address}}
+  <br>
+  Destino: {{b.trip.destinity.city}}, {{b.trip.destinity.address}}
+  <br>
+  Hora: {{b.trip.departure}}, {{b.trip.depTime}}
+  <br>
+  Autobús: {{b.trip.bus.plate}}, {{b.trip.bus.kind}}
+  <br>
+  <br>
+</div>

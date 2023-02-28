@@ -1,2 +1,11 @@
 <h1>Autobuses</h1>
 
+<div *ngFor="let item of busesData">
+  Placa: {{item.plate}}
+  <br>
+  Clase: {{item.kind}}
+  <br>
+  Estación: {{item.station.city}}, {{item.station.address}}
+  <br>
+  <br>
+</div>
