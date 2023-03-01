@@ -10,6 +10,7 @@ import { AdminsService } from "../../../../services/admins.service";
 export class AdminListComponent implements OnInit{
   public adminsData: any;
 
+
   constructor(private adminsService: AdminsService) {
   }
 
@@ -19,7 +20,7 @@ export class AdminListComponent implements OnInit{
 
   consulta(): void {
     this.adminsService.getAdmins().subscribe( res => {
-      console.log(res);
+      //console.log(res);
       this.adminsData = res;
     }, (error: any) => {
       console.log(error)

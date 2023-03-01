@@ -1,8 +1,10 @@
 
 <c-footer>
   <div class="footer">
-    <button>Sing Up</button>
-    <button>Log In</button>
-    <button>Log Out</button>
+    <hr>
+    <!--<button>Sing Up</button>-->
+    <button [routerLink]="['login']" *ngIf="(adminIsLogged || userIsLogged)===false">Log In</button>
+    <button (click)="salir()" *ngIf="(adminIsLogged || userIsLogged)===true">Log Out</button>
+    <hr>
   </div>
 </c-footer>

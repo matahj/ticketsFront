@@ -19,7 +19,7 @@ export class UserListComponent implements OnInit{
 
   consulta(): void {
     this.usersService.getUsers().subscribe( res => {
-      console.log(res);
+      //console.log(res);
       this.usersData = res;
     }, (error: any) => {
       console.log(error);

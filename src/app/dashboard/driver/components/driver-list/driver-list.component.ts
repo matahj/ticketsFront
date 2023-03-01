@@ -19,7 +19,7 @@ export class DriverListComponent implements OnInit{
 
   consulta(): void {
     this.driversService.getDrivers().subscribe( res => {
-      console.log(res);
+      //console.log(res);
       this.driversData = res;
     }, (error: any) => {
       console.log(error);

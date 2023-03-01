@@ -1,15 +1,25 @@
-<h1>
-  Estaciones
-  <button>Nuevo</button>
-</h1>
+<div>
+  <h1>
+    Estaciones
+    <button>Nuevo</button>
+  </h1>
+  <hr>
+</div>
+
+<!--<div>
+  <hr>
+  GetUsuario: {{station.city}}, {{station.address}}
+  <hr>
+  <br>
+</div>-->
 
 <div *ngFor="let est of stationsData">
+
   Ciudad: {{est.city}}
   <br>
   Dirección: {{est.address}}
   <br>
   <button>Borrar</button>
   <button>Actualizar</button>
-  <br>
-  <br>
+  <hr>
 </div>

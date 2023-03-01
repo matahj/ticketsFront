@@ -19,7 +19,7 @@ export class TicketListComponent implements OnInit{
 
   consulta(): void {
     this.ticketsService.getTickets().subscribe( res=> {
-      console.log(res);
+      //console.log(res);
       this.ticketsData = res;
     }, (error: any) => {
       console.log(error);

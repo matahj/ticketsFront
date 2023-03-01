@@ -9,15 +9,18 @@ import {StationListComponent} from "./dashboard/station/components/station-list/
 import {UserListComponent} from "./dashboard/user/components/user-list/user-list.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
 import {AuthGuard} from "./guards/auth.guard";
+import {AdminAuthGuard} from "./guards/admin-auth.guard";
+import {LoginComponent} from "./shared/components/login/login.component";
 
 const routes: Routes = [
-  {path: "admins", component: AdminListComponent},
-  {path: "buses", component: BusListComponent},
-  {path: "drivers", component: DriverListComponent},
-  {path: "stations", component: StationListComponent},
-  {path: "tickets", component: TicketListComponent, canActivate: [AuthGuard]},
+  {path: "login", component: LoginComponent},
+  {path: "admins", component: AdminListComponent, canActivate: [AdminAuthGuard]},
+  {path: "buses", component: BusListComponent, canActivate: [AdminAuthGuard]},
+  {path: "drivers", component: DriverListComponent, canActivate: [AdminAuthGuard]},
+  {path: "stations", component: StationListComponent, canActivate: [AdminAuthGuard]},
+  {path: "tickets", component: TicketListComponent, canActivate: [AdminAuthGuard]},
   {path: "trips", component: TripListComponent},
-  {path: "users", component: UserListComponent},
+  {path: "users", component: UserListComponent, canActivate: [AdminAuthGuard]},
   {path: "", redirectTo: "/trips", pathMatch: 'full'},
   {path: "**", component: NotFoundComponent}
 ];

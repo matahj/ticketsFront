@@ -9,6 +9,7 @@ import {SharedModule} from "./shared/shared.module";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {AuthGuard} from "./guards/auth.guard";
+import {AdminAuthGuard} from "./guards/admin-auth.guard";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {AuthGuard} from "./guards/auth.guard";
     DashboardModule,
     BrowserAnimationsModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, AdminAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

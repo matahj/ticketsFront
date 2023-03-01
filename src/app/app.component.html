@@ -1,5 +1,6 @@
 <app-header01></app-header01>
 
+<hr>
 <button [routerLink]="['trips']" >Viajes</button>
 <button [routerLink]="['tickets']" *ngIf="userIsLogged || adminIsLogged">Boletos</button>
 <button [routerLink]="['users']" *ngIf="adminIsLogged">Usuarios</button>
@@ -7,6 +8,7 @@
 <button [routerLink]="['buses']" *ngIf="adminIsLogged">Autobuses</button>
 <button [routerLink]="['drivers']" *ngIf="adminIsLogged">Conductores</button>
 <button [routerLink]="['admins']" *ngIf="adminIsLogged">Administradores</button>
+<hr>
 
 <router-outlet></router-outlet>
 
